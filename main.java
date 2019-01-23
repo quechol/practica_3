@@ -75,10 +75,10 @@ int main (){
 	}
   
   //CALCULAR R MAXIMO
-  int rmax = 0;
+  int rmax = 1;
   for(int xD = 1; xD<=n; xD++){
     
-   rmax = rmax*superiores[xD-1];
+   rmax = rmax*rangos[xD-1];
     
   }
   
@@ -88,10 +88,18 @@ int main (){
   //MENU
   int opcion;
   double pD;
+  int res[n-1];
   printf("¿Desea calcular finalmente el polinomio de direccionamiento? \n	1:Sí\n	2:No\n");
   scanf("%d",&opcion);
   if(opcion == 1){ //Uso de toda la información guardada en los arreglos utilizando p.D de n dimensiones
-    pD = dirE +[]
+    for(int m=1; m<=n-1; m++){
+      res[n-m] = rangos[n-m] * rangos[n-m] * rangos[];
+      
+    }
+      
+      
+      
+      
   }else if(opcion == 0){
     printf("XD");
   }
@@ -99,3 +107,41 @@ int main (){
 	
 return 0;
 }
+
+
+
+ /*
+for(int m=tamar-1;m=0;m--){
+		for(int j=0;j<tamar-c;j++){
+			if(j=0){
+				rtot=rtot+r[i];
+			}else{
+				rtot=rtot*r[i];
+			}
+		}
+		rtot=rtot*(k[tamar-c]-inf[tamar-c]);
+		printf("Direccion: %d",direccion);
+		direccion=direccion+rtot;
+		rtot=0;
+		c++;
+	}
+  
+  
+  //Codigo de Franco
+  
+  r=1;
+	cont=0;
+	l=n-1;
+	for(i=1;i<=l;i++){
+		for(j=0;j<=l-i;j++){
+		r=rangos[j]*r;	
+		}
+		res=(ks[l-cont]-inferiores[l-cont])*r;
+		cont++;
+		r=1;
+		
+	}
+*/
+
+
+
