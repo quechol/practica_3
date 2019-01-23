@@ -2,6 +2,7 @@
 #include<math.h>
 int main (){
 	int n; //Para las n dimensiones
+	int t;
 	int bytes;
 	printf("\nCalculador de Dirección en un Punto dentro de un Arreglo N-Dimensional\n");
 	printf();
