@@ -1,11 +1,10 @@
-import java.util.Scanner;
-
-public class main {
+#include<stdio.h>
+#include<math.h>
+int main (){
 	
-	public static void main(String [] args){
+	printf("\nCalculador de Dirección en un Punto dentro de un Arreglo N-Dimensional\n");
+	printf();
 	
-		
-		
-	}
-
+	
+int 
 }
