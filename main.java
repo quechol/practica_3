@@ -90,19 +90,25 @@ int main (){
 	
 	printf("¿Desea calcular finalmente el polinomio de direccionamiento? \n	1:Sí\n	2:No\n");
 	scanf("%d",&opcion);
+	
+	//Llenado inicial del arreglo de resultados con 1's  para evitar problemas de multiplicación por 0 o NULL
+	for(int p=0; p<=n-1; p++){
+		resultados[p] = 1;
+	}
+	
 	if(opcion == 1){
 		for(int m=0; m<=n-1; m++){
 			parentesis[m] = ks[m] - inferiores[m];
 			if(m == 0){ //Sólo pasará una vez
 				resultados[m] = parentesis[m];
 			}else{
-				for(int r=0; r<m ; r++){ //Multiplicación de los rangos
-					while(r != (n-1)){
-						
-					}
-					
+				//multiplicación de los rangos
+				int r=0;
+				while(r != m){ //Debido a que nunca se va a llegar al r4
+					resultados[m] = rangos[r] * resultados[m];	
+					r++;
 				}
-				resultados[m] = parentesis[m] * rangos[m];
+				resultados[m] = parentesis[m] * resultados[m];
 			}
 		}
 	}else if(opcion == 0){
@@ -110,8 +116,14 @@ int main (){
 	}
 	
 	//CALCULO final
+	pD = 0;
+	for(int z=0; z<n ; z++){
+		pD = pD + resultados[z];
+	}
 	
+	pD = (pD * bytes) + dirE;
 	
+	printf("RESULTADO: %d\n",pD);
 	
 	return 0;
 }
